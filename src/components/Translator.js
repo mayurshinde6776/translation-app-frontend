@@ -8,7 +8,7 @@ function Translator() {
 
   const handleTranslate = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/translate', { text: inputText });
+      const response = await axios.post('https://translation-app-server-1.onrender.com/translate', { text: inputText });
       setTranslatedText(response.data.translation);
     } catch (error) {
       console.error('Translation error:', error.message);
